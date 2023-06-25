@@ -17,6 +17,7 @@ class UFrm(TFrm):
             self.edterro.insert(index=0, string=self.dao.erro)
 
     def ev002_click(self):
+        super().ev002_click()
         self.dao.subtrair(self.edt001.get(), self.edt002.get())
         if len(self.dao.erro) == 0:
             self.lb001['text'] = f'A subtração é: {self.dao.vlresult:,.4f}'
@@ -24,6 +25,7 @@ class UFrm(TFrm):
             self.edterro.insert(index=0, string=self.dao.erro)
 
     def ev003_click(self):
+        super().ev003_click()
         self.dao.multiplicar(self.edt001.get(), self.edt002.get())
         if len(self.dao.erro) == 0:
             self.lb001['text'] = f'A multiplicação é: {self.dao.vlresult:,.4f}'
@@ -31,6 +33,7 @@ class UFrm(TFrm):
             self.edterro.insert(index=0, string=self.dao.erro)
 
     def ev004_click(self):
+        super().ev004_click()
         self.dao.dividir(self.edt001.get(), self.edt002.get())
         if len(self.dao.erro) == 0:
             self.lb001['text'] = f'A divisão é: {self.dao.vlresult:,.4f}'

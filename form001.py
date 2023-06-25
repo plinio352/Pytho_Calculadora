@@ -4,17 +4,24 @@ import tkinter as formulario
 class TFrm:
 
     def ev001_click(self):
-        self.lb001['text'] = 'Plinio Pereira'
+        self.edterro.delete(0, 'end')
+        self.edterro.insert(index=0, string='Msg. Erro!')
         self.lb001['background'] = 'orange'
 
     def ev002_click(self):
-        pass
+        self.edterro.delete(0, 'end')
+        self.edterro.insert(index=0, string='Msg. Erro!')
+        self.lb001['background'] = 'white'
 
     def ev003_click(self):
-        pass
+        self.edterro.delete(0, 'end')
+        self.edterro.insert(index=0, string='Msg. Erro!')
+        self.lb001['background'] = 'khaki'
 
     def ev004_click(self):
-        pass
+        self.edterro.delete(0, 'end')
+        self.edterro.insert(index=0, string='Msg. Erro!')
+        self.lb001['background'] = 'pink'
 
     def __init__(self):
         self.tela = formulario.Tk()
@@ -27,11 +34,11 @@ class TFrm:
 
         self.edt001 = formulario.Entry(self.tela)
         self.edt001.place(x=50, y=60, width=50)
-
+        self.edt001.focus()
         self.edt002 = formulario.Entry(self.tela)
         self.edt002.place(x=110, y=60, width=50)
 
-        self.edterro = formulario.Entry(self.tela, textvariable='erro')
+        self.edterro = formulario.Entry(self.tela)
         self.edterro.place(x=1, y=210, width=300)
 
         self.btn001 = formulario.Button(self.tela, width="10", text="Somar", command=self.ev001_click)
